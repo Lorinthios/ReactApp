@@ -28,9 +28,9 @@ export default class GameManager extends Component{
           <button onClick={this.changeView.bind(this, GameStates.Battle) }>Battle</button>
           
           <div>
-            { this.state.gameState == GameStates.Game ? <Game /> : null }
-            { this.state.gameState == GameStates.Menu ? <Menu /> : null }
-            { this.state.gameState == GameStates.Battle ? <Battle /> : null }
+            { this.state.gameState === GameStates.Game ? <Game /> : null }
+            { this.state.gameState === GameStates.Menu ? <Menu /> : null }
+            { this.state.gameState === GameStates.Battle ? <Battle /> : null }
           </div>
           
         </div>
