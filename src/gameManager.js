@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Game from 'game.js';
-import Menu from 'menu.js';
-import Battle from 'battle.js';
+import Game from './game.js';
+import Menu from './menu.js';
+import Battle from './battle.js';
 
 const GameStates = {
   Game: 1,
@@ -17,14 +17,15 @@ export default class GameManager extends Component{
       this.state = {
          gameState: GameStates.Game
       };
+
   }
   
     render(){
       return (
         <div>
-          <button onClick={function(){ this.changeView(GameStates.Game) }}>Game</button>
-          <button onClick={function(){ this.changeView(GameStates.Menu) }}>Menu</button>
-          <button onClick={function(){ this.changeView(GameStates.Battle) }}>Battle</button>
+          <button onClick={this.changeView.bind(this, GameStates.Game) }>Game</button>
+          <button onClick={this.changeView.bind(this, GameStates.Menu) }>Menu</button>
+          <button onClick={this.changeView.bind(this, GameStates.Battle) }>Battle</button>
           
           <div>
             { this.state.gameState == GameStates.Game ? <Game /> : null }
