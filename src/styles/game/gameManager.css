@@ -1,0 +1,16 @@
+.game-frame{
+    width: 520px;
+    height: 360px;
+}
+
+.game-frame-internal{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.game-frame-internal div{
+    width: 100%;
+    height: 100%;
+}

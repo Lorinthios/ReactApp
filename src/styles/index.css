@@ -6,9 +6,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.full-background{
+  width: 100%;
+  height: 100vh;
+  background-color: #303030;
+}
+
+button{
+  background-color: #505050;
+  padding: 4px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+button:hover{
+  background-color: #606060;
+}
+
+button:active{
+  background-color: #707070;
+}
+
+button:focus{
+  outline: 0;
 }
