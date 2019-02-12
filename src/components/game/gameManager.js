@@ -1,23 +1,19 @@
 import React, { Component } from 'react';
-import Game from './game.js';
-import Menu from './menu.js';
+import Game from './game';
+import Menu from './menu';
+import Chat from './chat'
 import Battle from './battle.js';
+import { GameStates } from './gameScripts/enum';
 import '../../styles/game/gameManager.css';
 
-var BackgroundImage = require('../../images/GameboyFrame.png');
-
-const GameStates = {
-  Game: 1,
-  Battle: 2
-}
-
 const gameFrameImage = {
-  backgroundImage: 'url(' + BackgroundImage + ')',
+  backgroundImage: "url('images/GameboyFrame.png')",
   display: 'inline-block'
 }
 
 const inline = {
-  display: 'inline-block'
+  display: 'inline-block',
+  position: 'absolute'
 }
 
 export default class GameManager extends Component {
@@ -28,27 +24,27 @@ export default class GameManager extends Component {
     this.state = {
       gameState: GameStates.Game
     };
-
   }
 
   render() {
     return (
       <div>
-        <div className="game-frame" style={gameFrameImage}>
-          <div className="game-frame-internal">
-            {this.state.gameState === GameStates.Game ? <Game /> : null}
-            {this.state.gameState === GameStates.Battle ? <Battle /> : null}
+        <div>
+          <div className="game-frame" style={gameFrameImage}>
+            <div className="game-frame-internal">
+              {this.state.gameState === GameStates.Game ? <Game /> : null}
+              {this.state.gameState === GameStates.Battle ? <Battle /> : null}
+            </div>
           </div>
+
+          <div style={inline}>
+            <Menu />
+          </div>
+
         </div>
-
-        <div style={gameFrameImage}>
-
+        <div>
+          <Chat />
         </div>
-
-        <div style={inline}>
-          <Menu />
-        </div>
-
       </div>
     );
   }

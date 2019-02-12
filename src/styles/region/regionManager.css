@@ -1,0 +1,8 @@
+input[type="text"]{
+    width: 100px;
+}
+
+textarea{
+    width: 500px;
+    max-width: 500px;
+}

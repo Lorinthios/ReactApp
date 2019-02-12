@@ -1,0 +1,40 @@
+.chat-area{
+
+}
+
+.chat-area input[type="text"]{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+    width: 720px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.chat-area button{
+    margin-top: 8px;
+    float: right;
+}
+
+.chat-section{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    overflow: auto;
+    height: 200px;
+}
+
+.chat-messages{
+
+}
+
+.chat-messages ul{
+    list-style-type: "none";
+    padding-inline-start: 12px;
+    margin-block-start: 8px;
+}
+
+.chat-messages li{
+    list-style-type: "none";
+    font-size: 14px;
+}
+
